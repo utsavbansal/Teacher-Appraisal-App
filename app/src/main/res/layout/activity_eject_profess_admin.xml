@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/admin_background"
+    android:layout_height="match_parent"
+    tools:context="utsavbansal.teacher_evaluation_app.eject_profess_admin">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <TextView
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="    Teacher's Profile"
+            android:textSize="40sp"
+            android:id="@+id/txtheader"
+            />
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/teacher_pic"
+            android:src="@drawable/arpit"
+            android:layout_below="@id/txtheader"
+            />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:fontFamily="cursive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/teacher_pic"
+            android:layout_below="@id/txtheader"
+            android:text="Name"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:id="@+id/eject_teacher_profile"
+            />
+
+        <TextView
+            android:fontFamily="cursive"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/teacher_pic"
+            android:layout_below="@id/eject_teacher_profile"
+            android:text="Age"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:id="@+id/eject_teacher_age"
+            />
+        <TextView
+            android:fontFamily="cursive"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/teacher_pic"
+            android:layout_below="@id/eject_teacher_age"
+            android:text="Gender"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/eject_teacher_gender"
+            />
+        <TextView
+            android:fontFamily="cursive"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/teacher_pic"
+            android:text="Qualification: "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:id="@+id/eject_teacher_quali"
+            />
+
+        <TextView
+            android:fontFamily="cursive"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eject_teacher_quali"
+            android:text="Contact: "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:id="@+id/eject_teacher_contact"
+            />
+        <TextView
+            android:fontFamily="cursive"
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/eject_teacher_contact"
+            android:text="University: "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:id="@+id/eject_teacher_univ"
+            />
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eject Teacher"
+            android:background="@color/colorred"
+            android:id="@+id/eject_teacher_admin"
+            android:layout_below="@id/eject_teacher_univ"
+            />
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vaildate Teacher"
+            android:background="@color/colorgreen"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/eject_teacher_admin"
+            android:id="@+id/validate_teacher_admin"
+            android:layout_below="@id/eject_teacher_univ"
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/eject_teacher_admin"
+            android:id="@+id/eject_teacher_status_result"
+            android:textColor="@color/colorgreen"
+            android:fontFamily="cursive"
+            />
+
+
+
+
+
+
+    </RelativeLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

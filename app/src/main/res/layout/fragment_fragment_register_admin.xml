@@ -1,0 +1,82 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="utsavbansal.teacher_evaluation_app.fragment_register_admin">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <TextView
+            android:fontFamily="cursive"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Details:"
+            android:textSize="60sp"
+            android:id="@+id/text_f"
+            />
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter ID"
+            android:textSize="40sp"
+            android:id="@+id/newid_f"
+            android:inputType="textEmailAddress"
+            />
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Name"
+            android:textSize="40sp"
+            android:id="@+id/newname_f"
+            android:inputType="text"
+            />
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Contact"
+            android:textSize="40sp"
+            android:id="@+id/newcontact_f"
+            android:inputType="number"
+            />
+
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Password"
+            android:textSize="40sp"
+            android:id="@+id/newpass_f"
+            android:inputType="textPassword"
+            />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/register_teacher"
+            android:id="@+id/newregister_f"
+            android:textSize="30sp"
+            />
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="30sp"
+            android:id="@+id/status_f"
+            />
+    </LinearLayout>
+    </ScrollView>
+</FrameLayout>

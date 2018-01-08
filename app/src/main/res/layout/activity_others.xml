@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/home1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="utsavbansal.teacher_evaluation_app.Others">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      >
+
+        <TextView
+            android:id="@+id/txt1_other"
+            android:layout_width="800dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:gravity="center_horizontal"
+            android:text="Professor Details"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageview_other"
+            android:layout_width="150dp"
+            android:layout_height="110dp"
+            android:layout_below="@+id/txt1_other"
+            android:src="@drawable/arpit" />
+
+        <TextView
+            android:id="@+id/name_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="50dp"
+            android:layout_toRightOf="@+id/imageview_other"
+
+            android:text="Name"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/age_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_other"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imageview_other"
+            android:text="Age"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/gender_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/age_other"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imageview_other"
+            android:text="Gender"
+            android:textSize="25dp"
+
+
+            />
+
+
+        <TextView
+            android:id="@+id/contact_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gender_other"
+            android:layout_marginTop="10dp"
+            android:text="Contact"
+            android:textSize="25dp"
+
+            />
+
+        <TextView
+            android:id="@+id/email_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/contact_other"
+            android:layout_marginTop="10dp"
+            android:text="Email"
+            android:textSize="25dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/qualifications_other"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/email_other"
+            android:layout_marginTop="10dp"
+            android:text="Qualifications"
+            android:textSize="25dp"
+
+            />
+
+        <TextView
+            android:id="@+id/textView_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+
+            android:layout_below="@+id/qualifications_other"
+            android:layout_marginTop="5dp"
+            android:text="Rating     "
+            android:textSize="45dp" />
+
+
+        <RatingBar
+            android:id="@+id/ratingbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/qualifications_other"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="5dp"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:stepSize="1" />
+
+        <TextView
+            android:id="@+id/comments"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ratingbar"
+            android:layout_marginTop="10dp"
+            android:text="Comments"
+            android:textSize="25dp" />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/comments">
+
+        </ListView>
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

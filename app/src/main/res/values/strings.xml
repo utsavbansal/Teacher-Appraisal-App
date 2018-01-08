@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Teacher_Evaluation_App</string>
+    <string name="home">Admin Home</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_admin_home">admin_home</string>
+    <string name="action_settings">Logout</string>
+</resources>

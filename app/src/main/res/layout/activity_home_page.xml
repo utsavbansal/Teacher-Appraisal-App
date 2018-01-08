@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+    android:background="@drawable/home1"
+    tools:context="utsavbansal.teacher_evaluation_app.HomePage">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <TextView
+            android:id="@+id/textView_tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="Teacher's Evaluation App"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignRight="@id/textView_tittle"
+            android:layout_below="@id/textView_tittle"
+            android:background="@drawable/refresh1" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/login2"
+            android:textStyle="bold"
+            android:layout_below="@+id/textView_tittle"
+            android:layout_toStartOf="@+id/refresh" />
+
+        <Button
+            android:id="@+id/btnsearchname_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/login"
+            android:background="@drawable/search1" />
+
+        <EditText
+            android:id="@+id/edt1"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/login"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btnsearchname_home"
+            android:fontFamily="cursive"
+            android:hint="Search By Name"
+            android:inputType="textPersonName"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btnsearchuniv_home"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/btnsearchname_home"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/search1" />
+
+
+        <EditText
+            android:id="@+id/edt2"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/edt1"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/btnsearchuniv_home"
+            android:fontFamily="cursive"
+            android:hint="Search By University"
+            android:inputType="textPersonName"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnsearchuniv_home"
+            android:fontFamily="cursive"
+            android:text="Please Click on name to see details:"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myrecycler_home"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/textview"
+
+            android:layout_marginTop="5dp"
+
+            />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

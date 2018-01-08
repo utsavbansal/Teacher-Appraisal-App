@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="utsavbansal.teacher_evaluation_app.vaidate_students">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <EditText
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:fontFamily="cursive"
+            android:layout_height="wrap_content"
+            android:hint="Search By University                     "
+            android:id="@+id/univ_search_student"
+            />
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/search3"
+            android:id="@+id/search_univ_student"
+            android:layout_toRightOf="@id/univ_search_student"/>
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Search By Name                           "
+            android:layout_below="@id/univ_search_student"
+            android:id="@+id/name_search_student"
+            />
+        <Button
+            android:layout_marginTop="20dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/search3"
+            android:layout_below="@id/univ_search_student"
+            android:id="@+id/search_name_student"
+            android:layout_toRightOf="@id/name_search_student"/>
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/refresh"
+            android:id="@+id/refresh_stud"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/name_search_student"
+            android:layout_alignRight="@id/search_name_student"
+            />
+        <android.support.v7.widget.RecyclerView
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/refresh_stud"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/myrecycler_student"
+
+
+            >
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</FrameLayout>

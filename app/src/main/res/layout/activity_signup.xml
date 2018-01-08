@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/student_portal1"
+    android:layout_height="match_parent"
+    tools:context="utsavbansal.teacher_evaluation_app.Signup">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/student"/>
+
+        <TextView
+            android:fontFamily="cursive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Hello Students"
+            android:id="@+id/txt"
+            android:textSize="50dp"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/image_student"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/arpit" />
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/image_student"
+                android:id="@+id/student_camera"
+                android:background="@drawable/camera"
+                />
+            <Button
+                android:layout_width="50dp"
+                android:layout_toRightOf="@id/image_student"
+                android:layout_below="@id/student_camera"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/student_select"
+                android:background="@drawable/select_pic"
+                />
+        </RelativeLayout>
+
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="enter your roll no"
+            android:layout_marginTop="10dp"
+            android:id="@+id/signid"/>
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="enter your Name"
+            android:id="@+id/signupname"/>
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:id="@+id/signupcollege_spin"/>
+
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="enter your contact"
+            android:id="@+id/signcontact"/>
+
+
+
+        <EditText
+            android:fontFamily="cursive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="enter your password"
+            android:id="@+id/signpassword"/>
+
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/register_student"
+            android:id="@+id/signregister"/>
+
+
+    </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

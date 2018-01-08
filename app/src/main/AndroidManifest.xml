@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="utsavbansal.teacher_evaluation_app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/projectlogo1"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/projectlogo1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".MainActivity">
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".login_admin"
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            />
+        <activity
+            android:name=".admin_home"
+            android:label="@string/title_activity_admin_home"
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".eject_profess_admin" />
+        <activity android:name=".eject_student_admin" />
+        <activity android:name=".HomePage"
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            />
+        <activity android:name=".Others" />
+        <activity android:name=".Login_teacher"
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            />
+        <activity android:name=".loginModule"
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            />
+        <activity android:name=".registerModule"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".updateModule"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".StudentPortal"
+            />
+        <activity android:name=".Login"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".Signup"
+            android:windowSoftInputMode="stateVisible|adjustPan"/>
+        <activity android:name=".Profile" />
+        <activity android:name=".Edit_student_profile"
+            android:windowSoftInputMode="stateVisible|adjustPan"
+            />
+        <activity android:name=".add_comment">
+            android:windowSoftInputMode="stateVisible|adjustPan"
+
+        </activity>
+    </application>
+
+</manifest>

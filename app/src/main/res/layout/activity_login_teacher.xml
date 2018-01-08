@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teacher_background"
+    tools:context="utsavbansal.teacher_evaluation_app.Login_teacher">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+       >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/teacher" />
+
+        <TextView
+            android:id="@+id/hometxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="cursive"
+
+            android:text="This is Home Page"
+            android:textSize="30dp" />
+
+        <EditText
+            android:id="@+id/edtidhome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:hint="Enter your E-mail" />
+
+        <EditText
+            android:id="@+id/edtpwdhome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:hint="Enter your password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/teacher_login" />
+
+        <Button
+            android:id="@+id/btnregister"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:background="@drawable/register_student" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

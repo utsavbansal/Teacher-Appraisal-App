@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/teacher_background"
+    tools:context="utsavbansal.teacher_evaluation_app.loginModule">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/teacher" />
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/arpit"
+                    android:id="@+id/img2"/>
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:text="Your Profile"
+                    android:textStyle="bold"
+                    android:textSize="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    />
+            </GridLayout>
+            <TextView
+                android:fontFamily="cursive"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20dp"
+                android:id="@+id/txtname"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+
+                android:fontFamily="cursive"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textSize="20dp"
+                android:id="@+id/txtage"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:fontFamily="cursive"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="20dp"
+                android:id="@+id/txtgender"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:fontFamily="cursive"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textSize="20dp"
+                android:id="@+id/txtcontact"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:fontFamily="cursive"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="E-mail"
+                android:textSize="20dp"
+                android:id="@+id/txtemail"
+                android:layout_marginTop="10dp"/>
+            <TextView
+                android:fontFamily="cursive"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Qualification"
+                android:id="@+id/txtqualification"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:fontFamily="cursive"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:id="@+id/txtpassword"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                />
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="University"
+                android:id="@+id/txtunversity"
+                android:layout_marginTop="10dp"
+                android:textSize="20dp"
+                android:fontFamily="cursive"
+                />
+
+            <!-- <Button
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:text="Edit Profile"
+                 android:id="@+id/btneditprofile"/>  -->
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="center"
+                android:background="@drawable/student_update"
+                android:id="@+id/lbtnupdate"/>
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+
+                android:background="@drawable/teacher_logout"
+                android:id="@+id/btnlogout"
+                android:layout_toRightOf="@id/lbtnupdate"
+                android:layout_gravity="center"
+                />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

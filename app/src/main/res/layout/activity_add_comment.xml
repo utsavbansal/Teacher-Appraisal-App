@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/student_portal1"
+    tools:context="utsavbansal.teacher_evaluation_app.add_comment">
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+      >
+
+        <TextView
+            android:id="@+id/txtheader_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="cursive"
+            android:text="    Teacher's Profile"
+            android:textSize="40sp" />
+
+        <ImageView
+            android:id="@+id/teacher_pic_comment"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/txtheader_comment"
+            android:src="@drawable/arpit" />
+
+        <TextView
+            android:id="@+id/student_teacher_profile_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtheader_comment"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/teacher_pic_comment"
+            android:text="Name"
+            android:fontFamily="cursive"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/student_teacher_age_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/student_teacher_profile_comment"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/teacher_pic_comment"
+            android:text="Age"
+            android:fontFamily="cursive"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/student_teacher_gender_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/student_teacher_age_comment"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/teacher_pic_comment"
+            android:text="Gender"
+            android:fontFamily="cursive"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/student_teacher_quali_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacher_pic_comment"
+            android:layout_marginTop="10dp"
+            android:text="Qualification: "
+            android:textSize="30sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/student_teacher_contact_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/student_teacher_quali_comment"
+            android:layout_marginTop="10dp"
+            android:text="Contact: "
+            android:textSize="30sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/student_teacher_univ_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/student_teacher_contact_comment"
+            android:layout_marginTop="10dp"
+            android:text="University: "
+            android:textSize="30sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtrating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/student_teacher_univ_comment"
+            android:text="Rating:"
+            android:textSize="30sp"
+            android:fontFamily="cursive"
+            android:textStyle="bold" />
+
+        <RatingBar
+            android:id="@+id/teacher_rating_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtrating"
+            android:numStars="5"
+            android:stepSize="1" />
+
+        <EditText
+            android:id="@+id/teacher_comment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacher_rating_comment"
+            android:hint="Enter comment here"
+            android:fontFamily="cursive"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/submitcomment"
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:layout_below="@id/teacher_comment"
+            android:layout_centerInParent="true"
+            android:background="@drawable/submit_student"
+
+
+            />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

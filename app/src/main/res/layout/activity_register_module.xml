@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/teacher_background"
+    android:layout_height="match_parent"
+    tools:context="utsavbansal.teacher_evaluation_app.registerModule">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/teacher" />
+
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/arpit"
+
+                    />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="1"
+                    >
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/camera"
+                        android:id="@+id/teacher_camera"
+                        />
+                    <Button
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/select_pic"
+                        android:id="@+id/teacher_select"
+                        />
+
+                </GridLayout>
+
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Name:             "
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:fontFamily="cursive"
+                    android:id="@+id/ntedtname"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="  Age:"
+
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:fontFamily="cursive"
+                    android:id="@+id/ntedtage"
+                    android:layout_width="200dp"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+            </GridLayout>
+            <TextView
+                android:fontFamily="cursive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  Gender:"
+                android:textSize="20dp"
+                />
+            <RadioGroup
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:id="@+id/gen_male"
+                    />
+                <RadioButton
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:id="@+id/gen_female"
+                    />
+
+            </RadioGroup>
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:columnCount="2">
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Contact:"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:fontFamily="cursive"
+                    android:id="@+id/ntedtcontact"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Qualifications:"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:fontFamily="cursive"
+                    android:id="@+id/ntedtqual"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+
+
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  University"
+                    android:textSize="20dp" />
+
+                <Spinner
+                    android:id="@+id/ntedtuni_spin"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Email id:"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:fontFamily="cursive"
+                    android:id="@+id/ntedtemail"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:fontFamily="cursive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  Password"
+                    android:textSize="20dp" />
+
+
+                <EditText
+                    android:fontFamily="cursive"
+                    android:id="@+id/ntedtpassword"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textSize="20dp" />
+
+
+            </GridLayout>
+
+            <Button
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/register_teacher"
+                android:layout_marginTop="10dp"
+                android:id="@+id/ntbtnregister"/>
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
