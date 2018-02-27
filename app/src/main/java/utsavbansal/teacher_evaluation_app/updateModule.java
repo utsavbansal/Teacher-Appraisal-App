@@ -54,7 +54,7 @@ public class updateModule extends AppCompatActivity {
     Bitmap bmp_select,globalbitmap;
     Input_checker input;
     File selfiepic;
-    boolean onclickimage=false;
+    boolean onclickimage=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +95,7 @@ public class updateModule extends AppCompatActivity {
 
 
         imageView.setImageBitmap(image_parser.String_to_Bitmap(teacher_image));
-
+        globalbitmap=image_parser.String_to_Bitmap(teacher_image);
         uupdate=(Button)findViewById(R.id.ubtnupdate);
         uupdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +108,7 @@ public class updateModule extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             Toast.makeText(updateModule.this, " " + response, Toast.LENGTH_LONG).show();
+                            finish();
                         }
                     }, new Response.ErrorListener() {  //4th parameter to generate error msg if server dosent response
                         @Override

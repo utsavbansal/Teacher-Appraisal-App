@@ -173,6 +173,7 @@ public class Profile extends AppCompatActivity implements AdapterView.OnItemSele
             intent.putExtra("contact",student_contact);
             intent.putExtra("student_image",student_image);
             startActivity(intent);
+            sp.setSelection(0);
         }
 
 }

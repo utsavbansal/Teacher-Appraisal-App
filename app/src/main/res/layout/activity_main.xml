@@ -43,7 +43,7 @@
         android:textColor="@color/colorAccent"
         android:gravity="center_horizontal"
         app:layout_constraintTop_toBottomOf="@+id/progessbar"
-         />
+        />
 
 
 </android.support.constraint.ConstraintLayout>

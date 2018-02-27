@@ -32,6 +32,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static utsavbansal.teacher_evaluation_app.Login.student_id;
+import static utsavbansal.teacher_evaluation_app.Login.student_image;
 import static utsavbansal.teacher_evaluation_app.Login.student_password;
 
 public class Edit_student_profile extends AppCompatActivity {
@@ -45,7 +46,7 @@ public class Edit_student_profile extends AppCompatActivity {
     RequestQueue requestQueue;
     String url="http://teacherevaluation.000webhostapp.com/update_student.php";
     File selfiepic;
-    boolean onclickimage=false;
+    boolean onclickimage=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,6 +77,7 @@ public class Edit_student_profile extends AppCompatActivity {
         student_contact.setText(stdcon);
         student_pass.setText(student_password);
         imageView.setImageBitmap(image_parser.String_to_Bitmap(bd.getString("student_image")));
+        globalbitmap=image_parser.String_to_Bitmap(student_image);
         requestQueue= Volley.newRequestQueue(this);
 
         update.setOnClickListener(new View.OnClickListener() {
@@ -92,6 +94,7 @@ public class Edit_student_profile extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             Toast.makeText(Edit_student_profile.this, " " + response, Toast.LENGTH_LONG).show();
+                            finish();
                         }
                     }, new Response.ErrorListener() {  //4th parameter to generate error msg if server dosent response
                         @Override
@@ -173,7 +176,7 @@ public class Edit_student_profile extends AppCompatActivity {
                 Bitmap bmp_select= BitmapFactory.decodeStream(inputStream);
                 globalbitmap=bmp_select;
                 imageView.setImageBitmap(bmp_select);
-                onclickimage=true;
+
             }
             catch (Exception e) {
                 Log.e("Reading_file_gallery",e.getMessage());
@@ -188,7 +191,7 @@ public class Edit_student_profile extends AppCompatActivity {
                 Bitmap bmp = BitmapFactory.decodeStream(fis);
                 globalbitmap=bmp;
                 imageView.setImageBitmap(bmp);
-                onclickimage=true;
+
             } catch (Exception ex) {
                 Log.e("error_reading_file", ex.getMessage());
             }
