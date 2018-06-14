@@ -43,8 +43,8 @@ import static utsavbansal.teacher_evaluation_app.Login_teacher.teacher_qualifica
 import static utsavbansal.teacher_evaluation_app.Login_teacher.teacher_university;
 
 public class updateModule extends AppCompatActivity {
-    TextView textupdate,utxtid,uuni;
-    EditText uname,ucontact,uage,uemail,uqual,ugender,upassword;
+    TextView textupdate,utxtid,uuni,ugender;
+    EditText uname,ucontact,uage,uemail,uqual,upassword;
     Button uupdate,camera,select_pic;
     int oid;
     RequestQueue requestQueue;
@@ -68,11 +68,11 @@ public class updateModule extends AppCompatActivity {
         select_pic=(Button)findViewById(R.id.teacher_update_select);
 
         uname=(EditText)findViewById(R.id.uedtname);
-        uage=(EditText)findViewById(R.id.uedtage);
+        uage=(EditText) findViewById(R.id.uedtage);
         textupdate=(TextView)findViewById(R.id.txtupdate);
         utxtid=(TextView)findViewById(R.id.utxtid);
         upassword=(EditText)findViewById(R.id.uedtpassword);
-        ugender=(EditText)findViewById(R.id.uedtgender);
+        ugender=(TextView)findViewById(R.id.uedtgender);
         uemail=(EditText)findViewById(R.id.uedtemail);
         uqual=(EditText)findViewById(R.id.uedtqual);
         ucontact=(EditText)findViewById(R.id.uedtcontact);

@@ -37,12 +37,12 @@ public class Input_checker {
                 status=false;
                 error="please remove whitespace in name at begining or end";
             }
-            for(int i=0;i<s.length();i++)
-                if(s.charAt(i)=='0' || s.charAt(i)=='1' || s.charAt(i)=='2' || s.charAt(i)=='3' || s.charAt(i)=='4'
-                        || s.charAt(i)=='5' || s.charAt(i)=='6' || s.charAt(i)=='7' || s.charAt(i)=='8' || s.charAt(i)=='9')
+            byte[] arr=s.getBytes();
+            for(byte b:arr)
+                if(!((b>=65&& b<=90) ||(b>=97&& b<=122) || b==32) )
                 {
                     status=false;
-                    error="Name cannot contain numeric values";
+                    error="Please enter valid name";
                     break;
                 }
         }
@@ -65,6 +65,14 @@ public class Input_checker {
                 status=false;
                 error="please remove whitespace in university at begining or end";
             }
+            byte[] arr=s.getBytes();
+            for(byte b:arr)
+                if(!((b>=65&& b<=90) ||(b>=97&& b<=122) || (b>=40&& b<=41)|| b==32 ) )
+                {
+                    status=false;
+                    error="Please enter valid university";
+                    break;
+                }
         }
         else
             error="Please enter valid university";
@@ -83,6 +91,19 @@ public class Input_checker {
                 status=false;
                 error="please remove whitespace in Email id";
             }
+            if(!(s.contains("@")&&s.contains(".")))
+            {
+                status=false;
+                error="please enter valid Email id";
+            }
+            byte[] arr=s.getBytes();
+            for(byte b:arr)
+                if(!((b>=65&& b<=90) ||(b>=97&& b<=122) || (b>=48&& b<=57) || b==64|| b==46 ) )
+                {
+                    status=false;
+                    error="Please enter valid email id";
+                    break;
+                }
         }
         else
             error="Please enter valid email id";
@@ -94,7 +115,7 @@ public class Input_checker {
     {
         boolean status=false;
 
-        if(s.length()>0) {
+        if(s.length()>=6) {
             status = true;
             if(s.contains(" "))
             {
@@ -103,7 +124,7 @@ public class Input_checker {
             }
         }
         else
-            error="Please enter valid password";
+            error="Please enter valid 6 digits password ";
 
 
         return status;
@@ -120,8 +141,8 @@ public class Input_checker {
                 status=false;
                 error="please remove whitespace in age";
             }
-            else if(Integer.parseInt(s)>=18){
-                status=true;
+            else if(!(Integer.parseInt(s)>=25 && Integer.parseInt(s)<=60)){
+                status=false;
                 error="Age is not valid";
             }
             else if(Integer.parseInt(s)<18)
@@ -132,8 +153,6 @@ public class Input_checker {
         }
         else
             error="Please enter valid age";
-
-
         return status;
     }
 
@@ -148,42 +167,48 @@ public class Input_checker {
                 status=false;
                 error="please remove whitespace in Roll number";
             }
-            else if(Integer.parseInt(s)>18){
+            else if(Integer.parseInt(s)>24){
                 status=true;
                 error="Roll number is not valid";
             }
-
+            byte[] arr=s.getBytes();
+            for(byte b:arr)
+                if(!( (b>=48&& b<=57) ) )
+                {
+                    status=false;
+                    error="Please enter valid roll number";
+                    break;
+                }
         }
         else
             error="Please enter valid roll number";
-
-
         return status;
     }
-
 
     public boolean check_contact(String s)
     {
         boolean status=false;
         int i;
-        if(s.length()>=6&& s.length()<=10) {
+        if(s.length()==7|| s.length()==10) {
             status = true;
             if(s.contains(" "))
             {
                 status=false;
                 error="please remove whitespace in Contact";
             }
-
-
+            byte[] arr=s.getBytes();
+            for(byte b:arr)
+                if(!((b>=48&& b<=57)) )
+                {
+                    status=false;
+                    error="Please enter valid Contact";
+                    break;
+                }
         }
         else
-            error="Please enter valid Contact number atleast 6 digits";
-
-
+            error="Please enter valid Contact number either 7 digits or 10 digits";
         return status;
     }
-
-
 
     public boolean check_comment(String s)
     {
@@ -197,14 +222,17 @@ public class Input_checker {
                 status=false;
                 error="please remove whitespace in comment at begining or end";
             }
-
-
-
+            byte[] arr=s.getBytes();
+            for(byte b:arr)
+                if(!((b>=65&& b<=90) ||(b>=97&& b<=122) || b==32 || b==64 || b==46 ) )
+                {
+                    status=false;
+                    error="Please enter valid comment";
+                    break;
+                }
         }
         else
             error="Please enter valid comment";
-
-
         return status;
     }
 
@@ -219,6 +247,14 @@ public class Input_checker {
                 status=false;
                 error="please remove whitespace in Qualification at begining or end";
             }
+            byte[] arr=s.getBytes();
+            for(byte b:arr)
+                if(!((b>=65&& b<=90) ||(b>=97&& b<=122) || b==32 || b==46 ) )
+                {
+                    status=false;
+                    error="Please enter valid qualification";
+                    break;
+                }
 
         }
 
@@ -236,7 +272,7 @@ public class Input_checker {
         }
 
         else
-            error="Please select Age";
+            error="Please select Gender";
         return status;
     }
 
@@ -249,29 +285,29 @@ public class Input_checker {
                 JSONObject object=(JSONObject)response_teacher.get(i);
                 if (    ((object.getString("name").startsWith(name)
                         ||object.getString("name").toLowerCase().startsWith(name.toLowerCase())
-                         ||object.getString("name").toUpperCase().startsWith(name.toUpperCase())
+                        ||object.getString("name").toUpperCase().startsWith(name.toUpperCase())
+                )
+                        &&
+                        (object.getString("rollno").startsWith(rollno)
+                                ||object.getString("rollno").toUpperCase().startsWith(rollno.toUpperCase())
+                                ||object.getString("rollno").toLowerCase().startsWith(rollno.toLowerCase())
                         )
-                                    &&
-                         (object.getString("rollno").startsWith(rollno)
-                         ||object.getString("rollno").toUpperCase().startsWith(rollno.toUpperCase())
-                         ||object.getString("rollno").toLowerCase().startsWith(rollno.toLowerCase())
-                         )
-                                     &&
-                         (object.getString("pass").startsWith(password)
-                         ||object.getString("pass").toLowerCase().startsWith(password.toLowerCase())
-                         ||object.getString("pass").toUpperCase().startsWith(password.toUpperCase()))
-                        )
-                            ||
+                        &&
+                        (object.getString("pass").startsWith(password)
+                                ||object.getString("pass").toLowerCase().startsWith(password.toLowerCase())
+                                ||object.getString("pass").toUpperCase().startsWith(password.toUpperCase()))
+                )
+                        ||
                         ((object.getString("rollno").startsWith(rollno)
                                 ||object.getString("rollno").toUpperCase().startsWith(rollno.toUpperCase())
                                 ||object.getString("rollno").toLowerCase().startsWith(rollno.toLowerCase())
-                            )
+                        )
                                 &&
                                 (object.getString("pass").startsWith(password)
                                         ||object.getString("pass").toLowerCase().startsWith(password.toLowerCase())
                                         ||object.getString("pass").toUpperCase().startsWith(password.toUpperCase()))
-                                )
-                )
+                        )
+                        )
                 {
                     status=true;
                     break;
@@ -293,30 +329,30 @@ public class Input_checker {
             try {
                 JSONObject object=(JSONObject)response_student.get(i);
                 if ((   (object.getString("name").startsWith(name)
-                            ||object.getString("name").toLowerCase().startsWith(name.toLowerCase())
-                            ||object.getString("name").toUpperCase().startsWith(name.toUpperCase())
+                        ||object.getString("name").toLowerCase().startsWith(name.toLowerCase())
+                        ||object.getString("name").toUpperCase().startsWith(name.toUpperCase())
+                )
+                        &&
+                        (object.getString("email").startsWith(email)
+                                ||object.getString("email").toLowerCase().startsWith(email.toLowerCase())
+                                ||object.getString("email").toUpperCase().startsWith(email.toUpperCase())
                         )
-                         &&
-                         (object.getString("email").startsWith(email)
-                             ||object.getString("email").toLowerCase().startsWith(email.toLowerCase())
-                             ||object.getString("email").toUpperCase().startsWith(email.toUpperCase())
-                         )
-                         &&
-                         (object.getString("password").startsWith(password)
-                         ||object.getString("password").toLowerCase().startsWith(password.toLowerCase())
-                         ||object.getString("password").toUpperCase().startsWith(password.toUpperCase()))
-                    )
+                        &&
+                        (object.getString("password").startsWith(password)
+                                ||object.getString("password").toLowerCase().startsWith(password.toLowerCase())
+                                ||object.getString("password").toUpperCase().startsWith(password.toUpperCase()))
+                )
                         ||
                         ((object.getString("email").startsWith(email)
                                 ||object.getString("email").toLowerCase().startsWith(email.toLowerCase())
                                 ||object.getString("email").toUpperCase().startsWith(email.toUpperCase())
-                                )
+                        )
                                 &&
                                 (object.getString("password").startsWith(password)
                                         ||object.getString("password").toLowerCase().startsWith(password.toLowerCase())
                                         ||object.getString("password").toUpperCase().startsWith(password.toUpperCase()))
-                                )
-                )
+                        )
+                        )
                 {
                     status=true;
                     break;
@@ -337,29 +373,29 @@ public class Input_checker {
             try {
                 JSONObject object=(JSONObject)response_admin.get(i);
                 if (  (  (object.getString("name").startsWith(name)
-                            ||object.getString("name").toLowerCase().startsWith(name.toLowerCase())
-                            ||object.getString("name").toUpperCase().startsWith(name.toUpperCase())
+                        ||object.getString("name").toLowerCase().startsWith(name.toLowerCase())
+                        ||object.getString("name").toUpperCase().startsWith(name.toUpperCase())
+                )
+                        &&
+                        (object.getString("email").startsWith(email)
+                                ||object.getString("email").toLowerCase().startsWith(email.toLowerCase())
+                                ||object.getString("email").toUpperCase().startsWith(email.toUpperCase())
                         )
-                            &&
-                            (object.getString("email").startsWith(email)
-                                 ||object.getString("email").toLowerCase().startsWith(email.toLowerCase())
-                                 ||object.getString("email").toUpperCase().startsWith(email.toUpperCase())
-                            )
-                            &&
-                            (object.getString("pass").startsWith(password)
-                                    ||object.getString("pass").toLowerCase().startsWith(password.toLowerCase())
-                                    ||object.getString("pass").toUpperCase().startsWith(password.toUpperCase()))
-                    )
-                     ||
+                        &&
+                        (object.getString("pass").startsWith(password)
+                                ||object.getString("pass").toLowerCase().startsWith(password.toLowerCase())
+                                ||object.getString("pass").toUpperCase().startsWith(password.toUpperCase()))
+                )
+                        ||
                         ((object.getString("email").startsWith(email)
                                 ||object.getString("email").toLowerCase().startsWith(email.toLowerCase())
                                 ||object.getString("email").toUpperCase().startsWith(email.toUpperCase())
-                                )
+                        )
                                 &&
                                 (object.getString("pass").startsWith(password)
                                         ||object.getString("pass").toLowerCase().startsWith(password.toLowerCase())
                                         ||object.getString("pass").toUpperCase().startsWith(password.toUpperCase()))
-                                )
+                        )
                         )
                 {
                     status=true;
@@ -374,18 +410,18 @@ public class Input_checker {
     }
 
     public boolean check_image(boolean img,Bitmap bmp){
-       if(!img) {
-           error = "Please select a valid image";
-           return false;
-       }
+        if(!img) {
+            error = "Please select a valid image";
+            return false;
+        }
         else {
             Image_Parser image_parser=new Image_Parser();
-           if(image_parser.bitmap_to_string(bmp).length()<48000)
-               return true;
+            if(image_parser.bitmap_to_string(bmp).length()<48000)
+                return true;
             else
                 error="Image size cannot be more than 8 kb";
-                return false;
-       }
+            return false;
+        }
 
     }
 

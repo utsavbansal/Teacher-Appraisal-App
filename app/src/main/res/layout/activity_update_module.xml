@@ -118,7 +118,7 @@
                     android:text="  Gender:"
                     android:textSize="20dp" />
 
-                <EditText
+                <TextView
                     android:fontFamily="cursive"
                     android:id="@+id/uedtgender"
                     android:layout_width="200dp"

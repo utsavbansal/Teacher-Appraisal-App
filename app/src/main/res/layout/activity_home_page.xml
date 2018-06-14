@@ -38,7 +38,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="20dp"
-            android:background="@drawable/login2"
+            android:background="@drawable/selectmenu"
             android:textStyle="bold"
             android:layout_below="@+id/textView_tittle"
             android:layout_toStartOf="@+id/refresh" />

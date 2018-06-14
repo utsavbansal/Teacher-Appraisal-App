@@ -122,6 +122,7 @@ public class add_comment extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(add_comment.this, " " + response, Toast.LENGTH_LONG).show();
+                        finish();
                     }
                 }, new Response.ErrorListener() {  //4th parameter to generate error msg if server dosent response
                     @Override
